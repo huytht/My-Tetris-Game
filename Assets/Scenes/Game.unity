@@ -7892,11 +7892,9 @@ MonoBehaviour:
   holdSound: {fileID: 8300000, guid: 7b42e2a65f7a4bc42a964b6ee4ba25bf, type: 3}
   musicSource: {fileID: 548270782}
   musicClips:
-  - {fileID: 8300000, guid: 6375ea5cec2e4d640978541de4046eea, type: 3}
-  - {fileID: 8300000, guid: de294bd9875c3f547926e0f24d29dfcb, type: 3}
+  - {fileID: 8300000, guid: a16f83ad08a61ed42a2a3992fba1db2e, type: 3}
   - {fileID: 8300000, guid: eb2c6b242d5fd774e92672fa4d5dbc15, type: 3}
   - {fileID: 8300000, guid: 8ffe72dfae04fdc4a9fd8928df021aea, type: 3}
-  - {fileID: 8300000, guid: 726620da1dd21bc4c91a25d29f2c9cca, type: 3}
   vocalClips:
   - {fileID: 8300000, guid: 6bad671440358844aab74bed8f60114b, type: 3}
   - {fileID: 8300000, guid: 1e2cc6bf916a46f489b6161e066b46ac, type: 3}
