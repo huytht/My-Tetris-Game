@@ -5,10 +5,10 @@ using System.Collections;
 public class Spawner : MonoBehaviour
 {
     public Shape[] allShapes;
-    public Transform[] queuedXforms = new Transform[3];
+    public Transform[] queuedXforms = new Transform[4];
     public ParticlePlayer spawnFx;
 
-    private Shape[] queuedShapes = new Shape[3];
+    private Shape[] queuedShapes = new Shape[4];
 
     private float queueScale = 0.5f;
 

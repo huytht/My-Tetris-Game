@@ -154,12 +154,12 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.lateinit.apps.solaireblockpuzzle
-    Standalone: com.lateinit.apps.solaireblockpuzzle
+    Standalone: com.Lateinit-Apps.Solaire-Block-Puzzle
   buildNumber:
     Standalone: 2
     iPhone: 0
     tvOS: 0
-  overrideDefaultApplicationIdentifier: 0
+  overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 6
   AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0

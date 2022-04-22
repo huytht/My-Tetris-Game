@@ -20,16 +20,22 @@ public class GameController : MonoBehaviour
     private float timeToDrop;
     private float timeToNextKeyLeftRight;
     private float timeToNextKeyDown;
+    private float timeToNextHardDrop;
     private float timeToNextKeyRotate;
 
     private float timeToNextSwipeLeftRight;
     private float timeToNextSwipeDown;
+
+    private bool hardDrop = false;
 
     [Range(0.02f, 1)]
     public float keyRepeatRateLeftRight = 0.1f;
 
     [Range(0.02f, 1)]
     public float keyRepeatRateDown = 0.05f;
+
+    [Range(0.02f, 1)]
+    public float keyRepeatHardDrop = 0.1f;
 
     [Range(0.02f, 1)]
     public float keyRepeatRateRotate = 0.05f;
@@ -82,6 +88,7 @@ public class GameController : MonoBehaviour
         timeToNextKeyLeftRight = Time.time + keyRepeatRateLeftRight;
         timeToNextKeyRotate = Time.time + keyRepeatRateRotate;
         timeToNextKeyDown = Time.time + keyRepeatRateDown;
+        timeToNextHardDrop = Time.time + keyRepeatHardDrop;
 
         if (!gameBoard)
         {
@@ -195,6 +202,8 @@ public class GameController : MonoBehaviour
                 else
                 {
                     LandShape();
+                    timeToNextHardDrop = Time.time + keyRepeatHardDrop;
+                    hardDrop = false;
                 }
             }
         }
@@ -226,6 +235,17 @@ public class GameController : MonoBehaviour
         {
             MoveDown();
         }
+        else if (Input.GetButtonDown("HardDrop") && Time.time > timeToNextHardDrop)
+        {
+            if (gameBoard.IsOverLimit(ghost.ghostShape)) GameOver();
+            else
+            {
+                while (gameBoard.IsOverLimit(activeShape))
+                    MoveDown();
+                while (!hardDrop && !gameBoard.IsOverLimit(activeShape))
+                    MoveDown();
+            }
+        } 
         else if ((swipeDirection == Direction.right && Time.time > timeToNextSwipeLeftRight) ||
                   swipeEndDirection == Direction.right)
         {

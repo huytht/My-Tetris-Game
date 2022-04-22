@@ -4,7 +4,7 @@ public class Ghost : MonoBehaviour
 {
     public Color color = new Color(1f, 1f, 1f, 0.2f);
 
-    private Shape ghostShape = null;
+    public Shape ghostShape { get; set; }
 
     private bool hitBottom = false;
 
