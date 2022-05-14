@@ -423,6 +423,12 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public void Menu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
     public void ToggleRotationDirection()
     {
         rotateClockwise = !rotateClockwise;
